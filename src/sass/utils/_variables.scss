@@ -1,0 +1,27 @@
+// Main font
+$main-font: 'Open Sans';
+
+// Color
+
+$main-dark: #2e3539;
+$main-white: #ffffff;
+$main-accent: #7165e3;
+$main-accent-yellow: #ffd324;
+$main-secondary: #818c9b;
+
+// Colors Fonts
+
+$main-dark-font: $main-dark;
+$main-white-font: $main-white;
+$main-accent-font: $main-accent;
+$main-secondary-font: $main-secondary;
+
+// Breakpoints
+$mobile: 320px;
+$tablet: 768px;
+$pc: 1200px;
+
+// Container
+$mob-wrapper: $mobile;
+$tab-wrapper: $tablet;
+$pc-wrapper: $pc;

@@ -1,0 +1,94 @@
+// https://www.bourbon.io/
+@import '../../../node_modules/bourbon/core/bourbon';
+
+%center {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+%reset {
+    margin: 0;
+    padding: 0;
+}
+
+@mixin font-source-sans(
+    $size: false,
+    $colour: false,
+    $weight: false,
+    $lh: false
+) {
+    @if $size {
+        font-size: $size;
+    }
+
+    @if $colour {
+        color: $colour;
+    }
+
+    @if $weight {
+        font-weight: $weight;
+    }
+
+    @if $lh {
+        line-height: $lh;
+    }
+}
+
+@mixin font-source($size: false, $weight: false) {
+    @if $size {
+        font-size: $size;
+    }
+
+    @if $weight {
+        font-weight: $weight;
+    }
+}
+
+@mixin size($width, $height) {
+    @if length($height) ==1 {
+        height: $height;
+        width: $width;
+    } @else {
+        height: $width;
+        width: $width;
+    }
+}
+
+@mixin border-radius($radius) {
+    border-radius: $radius;
+}
+
+@mixin pseudo($display: block, $content: '') {
+    display: $display;
+    content: $content;
+}
+
+@mixin psevdo($display: block, $content: '') {
+    display: $display;
+    content: $content;
+}
+
+@mixin for-size($size) {
+    @if $size==phone-only {
+        @media (max-width: 767px) {
+            @content;
+        }
+    } @else if $size==tablet-portrait-up {
+        @media (min-width: $tablet) {
+            @content;
+        }
+    } @else if $size==tablet-landscape-up {
+        @media (min-width: 1024px) {
+            @content;
+        }
+    } @else if $size==desktop-up {
+        @media (min-width: $pc) {
+            @content;
+        }
+    } @else if $size==big-desktop-up {
+        @media (min-width: 1800px) {
+            @content;
+        }
+    }
+}

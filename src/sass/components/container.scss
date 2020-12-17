@@ -1,0 +1,14 @@
+.container {
+    width: 100%;
+    @include margin(null auto);
+    @include padding(null 15px);
+    outline: 1px solid tomato;
+
+    @include for-size(tablet-portrait-up) {
+        width: $tab-wrapper;
+    }
+
+    @include for-size(desktop-up) {
+        width: $pc-wrapper;
+    }
+}
