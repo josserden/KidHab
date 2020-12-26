@@ -16,7 +16,8 @@
     $size: false,
     $colour: false,
     $weight: false,
-    $lh: false
+    $lh: false,
+    $ls: false
 ) {
     @if $size {
         font-size: $size;
@@ -33,25 +34,9 @@
     @if $lh {
         line-height: $lh;
     }
-}
 
-@mixin font-source($size: false, $weight: false) {
-    @if $size {
-        font-size: $size;
-    }
-
-    @if $weight {
-        font-weight: $weight;
-    }
-}
-
-@mixin size($width, $height) {
-    @if length($height) ==1 {
-        height: $height;
-        width: $width;
-    } @else {
-        height: $width;
-        width: $width;
+    @if $ls {
+        letter-spacing: $ls;
     }
 }
 
@@ -60,11 +45,6 @@
 }
 
 @mixin pseudo($display: block, $content: '') {
-    display: $display;
-    content: $content;
-}
-
-@mixin psevdo($display: block, $content: '') {
     display: $display;
     content: $content;
 }

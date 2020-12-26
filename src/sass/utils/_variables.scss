@@ -1,5 +1,5 @@
 // Main font
-$main-font: 'Open Sans';
+$main-font: 'Open Sans', sans-serif;
 
 // Color
 
@@ -8,6 +8,13 @@ $main-white: #ffffff;
 $main-accent: #7165e3;
 $main-accent-yellow: #ffd324;
 $main-secondary: #818c9b;
+$accent-bgc: #f7f8fc;
+$gradient: linear-gradient(
+    78.6deg,
+    rgba(113, 101, 227, 0.9) 14.74%,
+    rgba(255, 211, 36, 0.2) 101.59%
+);
+$drop-shadow: 0px 15px 20px rgba(113, 101, 227, 0.2);
 
 // Colors Fonts
 

@@ -1,0 +1,95 @@
+.section {
+    background-color: $main-white;
+    padding-top: 32px;
+    padding-bottom: 73px;
+
+    @include for-size(tablet-portrait-up) {
+        padding-top: 89px;
+    }
+
+    @include for-size(desktop-up) {
+        padding-top: 51px;
+    }
+}
+
+.section_clr {
+    background-color: $accent-bgc;
+}
+
+.section__content {
+    width: 290px;
+    outline: 1px solid tomato;
+
+    @include for-size(desktop-up) {
+        width: 360px;
+    }
+}
+
+.section__img {
+    position: relative;
+    @include size(240px, 429px);
+    border-radius: 20px;
+    box-shadow: $drop-shadow;
+
+    @media screen and (max-width: 767px) {
+        @include margin(null auto);
+    }
+
+    @include for-size(desktop-up) {
+        @include size(320px, 572px);
+    }
+}
+
+.section__img-intro {
+    @include position(absolute, null null -1px 0);
+    z-index: 2;
+}
+
+.section__icon {
+    @include position(absolute, null null -110px 0);
+    @include size(288px, 154px);
+
+    @include for-size(tablet-portrait-up) {
+        @include position(null, null null -1px 55px);
+        @include size(445px, 235px);
+    }
+
+    @include for-size(desktop-up) {
+        @include position(null, null null -75px 0);
+        @include size(753px, 400px);
+    }
+}
+
+.section__title {
+    @extend %reset;
+    font: {
+        family: 'Raleway', sans-serif;
+        style: normal;
+    }
+    margin-bottom: 15px;
+
+    @include font-source-sans(17px, $main-accent-font, 600, 31px, 0.04em);
+
+    @include for-size(desktop-up) {
+        margin-bottom: 35px;
+        line-height: 31px;
+    }
+}
+
+.section__descr {
+    @extend %reset;
+    font: {
+        family: 'Open Sans', sans-serif;
+        style: normal;
+    }
+
+    @include font-source-sans(14px, $main-dark-font, normal, 24px, null);
+
+    @media screen and (max-width: 767px) {
+        margin-bottom: 20px;
+    }
+
+    @include for-size(desktop-up) {
+        font-size: 16px;
+    }
+}
