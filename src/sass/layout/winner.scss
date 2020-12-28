@@ -1,0 +1,40 @@
+.winner {
+    @media screen and (max-width: 767px) {
+        padding-bottom: 160px;
+    }
+
+    @media screen and (min-width: 768px) and (max-width: 1199px) {
+        padding-bottom: 160px;
+    }
+}
+
+.winner__img {
+    @include size(240px, 415px);
+
+    @include for-size(desktop-up) {
+        @include size(320px, 533px);
+    }
+}
+
+.winner__img-intro {
+    @include size(240px, 414px);
+
+    @include for-size(desktop-up) {
+        @include size(320px, 533px);
+    }
+}
+
+.winner__icon {
+    @include position(absolute, null null -134px 0);
+    @include size(288px, 225px);
+
+    @include for-size(tablet-portrait-up) {
+        @include position(null, null null -152px -16px);
+        @include size(688px, 537px);
+    }
+
+    @include for-size(desktop-up) {
+        @include position(null, -12px null null 0);
+        @include size(707px, 605px);
+    }
+}

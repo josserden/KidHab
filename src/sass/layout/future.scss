@@ -1,0 +1,17 @@
+.wrapper .section__title {
+    margin-bottom: 20px;
+
+    @include for-size(tablet-portrait-up) {
+        margin-bottom: 27px;
+    }
+
+    @include for-size(desktop-up) {
+        margin-bottom: 32px;
+    }
+}
+
+.future__icon {
+    @include margin(null auto);
+    @include size(16px, 16px);
+    fill: $main-accent;
+}

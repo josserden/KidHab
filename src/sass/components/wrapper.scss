@@ -1,3 +1,11 @@
+.wrapper {
+    @media screen and (max-width: 767px) {
+        @include size(205px, auto);
+    }
+    @include margin(null auto);
+    text-align: center;
+}
+
 .wrapper__left,
 .wrapper__right {
     position: relative;

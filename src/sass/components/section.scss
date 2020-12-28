@@ -12,16 +12,36 @@
     }
 }
 
-.section_clr {
+.section__clr {
     background-color: $accent-bgc;
+    @include padding(39px null null 24px);
+
+    @include for-size(tablet-portrait-up) {
+        @include padding(40px null null 37px);
+    }
+
+    @include for-size(desktop-up) {
+        @include padding(46px null null 42px);
+    }
 }
 
 .section__content {
-    width: 290px;
+    width: 288px;
+    z-index: 3;
     outline: 1px solid tomato;
 
     @include for-size(desktop-up) {
-        width: 360px;
+        width: 320px;
+    }
+
+    &-small {
+        width: 288px;
+        z-index: 3;
+        outline: 1px solid tomato;
+
+        @include for-size(desktop-up) {
+            width: 262px;
+        }
     }
 }
 
@@ -30,6 +50,8 @@
     @include size(240px, 429px);
     border-radius: 20px;
     box-shadow: $drop-shadow;
+
+    z-index: 1;
 
     @media screen and (max-width: 767px) {
         @include margin(null auto);

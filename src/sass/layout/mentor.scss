@@ -1,8 +1,20 @@
+.mentor {
+    @media screen and (max-width: 767px) {
+        padding-top: 92px;
+        padding-bottom: 200px;
+    }
+}
+
 .mentor__img {
     @include size(240px, 605px);
 
-    @include for-size(tablet-portrait-up) {
+    @include for-size(desktop-up) {
+        @include size(320px, 806px);
     }
+}
+
+.mentor__img-intro {
+    @include size(240px, 605px);
 
     @include for-size(desktop-up) {
         @include size(320px, 806px);
@@ -10,16 +22,16 @@
 }
 
 .mentor__icon {
-    @include position(absolute, null null -110px 0);
-    @include size(288px, 154px);
+    @include position(absolute, null null -166px 0);
+    @include size(288px, 255px);
 
     @include for-size(tablet-portrait-up) {
         @include position(null, null null -1px 55px);
-        @include size(445px, 235px);
+        @include size(684px, 605px);
     }
 
     @include for-size(desktop-up) {
-        @include position(null, null null -75px 0);
-        @include size(753px, 400px);
+        @include position(null, 0 null -75px null);
+        @include size(707px, 605px);
     }
 }

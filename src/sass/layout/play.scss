@@ -1,0 +1,40 @@
+.play {
+    @media screen and (max-width: 1190px) {
+        padding-bottom: 180px;
+    }
+
+    @include for-size(desktop-up) {
+        padding-bottom: 100px;
+    }
+}
+
+.play__img {
+    @include size(240px, 418px);
+
+    @include for-size(desktop-up) {
+        @include size(320px, 558px);
+    }
+}
+
+.play__img-intro {
+    @include size(240px, 418px);
+
+    @include for-size(desktop-up) {
+        @include size(320px, 558px);
+    }
+}
+
+.play__icon {
+    @include position(absolute, null null -166px 0);
+    @include size(288px, 255px);
+
+    @include for-size(tablet-portrait-up) {
+        @include position(null, 0 null 35px null);
+        @include size(685px, 475px);
+    }
+
+    @include for-size(desktop-up) {
+        @include position(null, 0 null -75px null);
+        @include size(863px, 598px);
+    }
+}
