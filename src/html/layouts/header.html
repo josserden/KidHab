@@ -4,17 +4,54 @@
         <nav class="site__nav">
             <ul class="nav__list">
                 <li class="nav__item">
-                    <a class="nav__link" href="#">Про додаток</a>
+                    <a class="nav__link active" href="#">Про додаток</a>
                 </li>
                 <li class="nav__item">
                     <a class="nav__link" href="#">Команда</a>
                 </li>
             </ul>
-            <select class="form__select" aria-label="Default select example">
-                <option value="1"><a href="#">icon 1</a></option>
-                <option value="2"><a href="#">icon 2</a></option>
-                <option value="3"><a href="#">icon 3</a></option>
+            <select class="form__select" name="language">
+                <option class="language__item" value="uk" selected>
+                    <a href="#">
+                        icon 1
+                    </a>
+                </option>
+                <option class="language__item" value="ru">
+                    <a href="#">
+                        icon 2
+                    </a>
+                </option>
+                <option class="language__item" value="en">
+                    <a href="#">
+                        icon 3
+                    </a>
+                </option>
             </select>
+
+            
+            <!-- <ul class="dropdown">
+                <li>
+                    <a href="#" class="wpml-ls-link">
+                        <svg class="language__icon">
+                            <use href="../images/symbol-defs.svg#icon-ukr"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="wpml-ls-link">
+                        <svg class="language__icon">
+                            <use href="../images/symbol-defs.svg#icon-rus"></use>
+                        </svg>
+                    </a>
+                </li>
+                <li>
+                    <a href="#" class="wpml-ls-link">
+                        <svg class="language__icon">
+                            <use href="../images/symbol-defs.svg#icon-eng"></use>
+                        </svg>
+                    </a>
+                </li>
+            </ul> -->
         </nav>
     </div>
 </header>
