@@ -26,6 +26,23 @@
     }
 }
 
+.contacts__descr {
+    @extend %reset;
+}
+
+.contacts__link {
+}
+
+.contacts__descr,
+.contacts__link {
+    font: {
+        family: 'Open Sans';
+        style: normal;
+    }
+
+    @include font-source-sans(14px, $main-dark, 600, 19px, 0.04em);
+}
+
 .footer__information {
     @include for-size(tablet-portrait-up) {
         display: flex;
