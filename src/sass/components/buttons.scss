@@ -14,6 +14,7 @@
 .form__btn {
     @include font-source-sans(14px, $main-dark, 600, 19px, 0.04em);
     @include padding(15px 30px);
+    margin-top: 30px;
     font: {
         family: 'Open Sans';
         style: normal;

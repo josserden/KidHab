@@ -1,14 +1,35 @@
 .form {
-    // padding: 20px;
-    // margin: 20px;
-    // width: 600px;
     width: 100%;
+}
+
+.form__wrapper {
+    width: 100%;
+
+    @media screen and (max-width: 767px) {
+        margin-bottom: 49px;
+    }
+
+    @media screen and (max-width: 1199px) {
+        margin-bottom: 49px;
+    }
+
+    @include for-size(desktop-up) {
+        width: 361px;
+        margin-right: 30px;
+    }
+}
+
+.form__title {
+    margin-bottom: 13px;
 }
 
 .form__field {
     position: relative;
     display: block;
-    margin-bottom: 20px;
+}
+
+.form__field + .form__field {
+    margin-top: 15px;
 }
 
 .form__label {
@@ -37,6 +58,13 @@
     font: inherit;
     border-radius: 8px;
     border: 1px solid $form-border;
+    outline: none;
+}
+
+.form__input:focus,
+.textarea:focus {
+    // border-color: $form-border-focus;
+    box-shadow: 0px 0px 3px 1px #818c9b;
 }
 
 .textarea {

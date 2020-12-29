@@ -17,11 +17,11 @@
     @include padding(39px null 24px null);
 
     @include for-size(tablet-portrait-up) {
-        @include padding(40px null null 37px);
+        @include padding(40px null 37px null);
     }
 
     @include for-size(desktop-up) {
-        @include padding(46px null null 42px);
+        @include padding(46px null 42px null);
     }
 }
 
@@ -91,7 +91,7 @@
     margin-bottom: 15px;
 
     @include font-source-sans(17px, $main-accent-font, 600, 31px, 0.04em);
-    // От рутины уходим
+
     @include for-size(desktop-up) {
         margin-bottom: 35px;
         line-height: 31px;
