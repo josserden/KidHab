@@ -61,3 +61,26 @@
 .btn__google-white {
     border-color: $main-white;
 }
+
+.btn-to-top {
+    @include size(59px, 57px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    font: {
+        family: 'Raleway';
+        style: normal;
+    }
+
+    @include font-source-sans(17px, $main-accent-font, 600, 31px, 0.04em);
+
+    @include for-size(phone-only) {
+        @include margin(null auto 40px auto);
+    }
+
+    @include for-size(tablet-portrait-up) {
+        // margin-right: 180px;
+    }
+}
