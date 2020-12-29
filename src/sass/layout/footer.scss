@@ -21,12 +21,36 @@
         width: 966px;
     }
 }
+
+.footer__title {
+    @extend %reset;
+    font: {
+        family: 'Raleway';
+        style: normal;
+    }
+
+    @include font-source-sans(17px, $main-accent-font, 600, 31px, 0.04em);
+
+    margin-top: 25px;
+    margin-bottom: 14px;
+
+    @include for-size(desktop-up) {
+        margin-bottom: 17px;
+    }
+}
+
 .footer__descr,
 .contacts__descr {
     @extend %reset;
 }
 
 .contacts__link {
+    transition: color $animation;
+
+    &:hover,
+    &:focus {
+        color: $main-accent;
+    }
 }
 
 .footer__descr,
@@ -38,6 +62,16 @@
     }
 
     @include font-source-sans(16px, $main-secondary-font, normal, 22px, 0.02em);
+}
+
+.contacts__descr + .contacts__descr,
+.contacts__tel + .contacts__tel {
+    margin-top: 3px;
+}
+
+.contacts__mail {
+    margin-top: 25px;
+    margin-bottom: 25px;
 }
 
 .footer__information {

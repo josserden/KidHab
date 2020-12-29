@@ -36,6 +36,11 @@
 .btn__apple {
     @include size(209px, 70px);
     border-radius: 7px;
+    margin-bottom: 19px;
+
+    @include for-size(desktop-up) {
+        margin-bottom: 16px;
+    }
 }
 
 .btn__google {

@@ -21,7 +21,7 @@
     }
 
     @include for-size(desktop-up) {
-        @include padding(46px null null 42px);
+        @include padding(46px null 42px null);
     }
 }
 
