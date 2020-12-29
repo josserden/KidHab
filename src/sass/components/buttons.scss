@@ -1,7 +1,6 @@
 .button {
     margin: 0;
     padding: 0;
-    display: block;
     text-decoration: none;
     background-color: transparent;
     border: none;
@@ -12,6 +11,7 @@
 }
 
 .form__btn {
+    display: inline-block;
     @include font-source-sans(14px, $main-dark, 600, 19px, 0.04em);
     @include padding(15px 30px);
     margin-top: 30px;
@@ -32,4 +32,16 @@
         box-shadow: none;
         letter-spacing: 0.05em;
     }
+}
+
+.btn__apple {
+    @include size(209px, 70px);
+    @extend %center;
+    border-radius: 7px;
+}
+
+.btn__google {
+    @include size(235px, 70px);
+    @extend %center;
+    border-radius: 7px;
 }

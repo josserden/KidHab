@@ -38,3 +38,12 @@ address {
         display: block;
     }
 }
+
+b {
+    @include font-source-sans(17px, $main-accent, normal, 31px, 0.04em);
+    font: {
+        family: 'Lobster';
+        style: normal;
+    }
+    @extend %reset;
+}
