@@ -14,7 +14,7 @@
 
 .section__clr {
     background-color: $accent-bgc;
-    @include padding(39px null null 24px);
+    @include padding(39px null 24px null);
 
     @include for-size(tablet-portrait-up) {
         @include padding(40px null null 37px);
@@ -85,13 +85,13 @@
 .section__title {
     @extend %reset;
     font: {
-        family: 'Raleway', sans-serif;
+        family: 'Raleway';
         style: normal;
     }
     margin-bottom: 15px;
 
     @include font-source-sans(17px, $main-accent-font, 600, 31px, 0.04em);
-
+    // От рутины уходим
     @include for-size(desktop-up) {
         margin-bottom: 35px;
         line-height: 31px;
@@ -101,7 +101,7 @@
 .section__descr {
     @extend %reset;
     font: {
-        family: 'Open Sans', sans-serif;
+        family: 'Open Sans';
         style: normal;
     }
 

@@ -29,6 +29,10 @@ svg {
     height: auto;
 }
 
+address {
+    font-style: normal;
+}
+
 .line-break {
     @include for-size(tablet-portrait-up) {
         display: block;
