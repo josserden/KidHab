@@ -4,7 +4,6 @@
     text-decoration: none;
     background-color: transparent;
     border: none;
-    outline: none;
     font-family: inherit;
 
     cursor: pointer;
@@ -36,12 +35,24 @@
 
 .btn__apple {
     @include size(209px, 70px);
-    @extend %center;
     border-radius: 7px;
 }
 
 .btn__google {
     @include size(235px, 70px);
+    border-radius: 5px;
+}
+
+.btn__apple,
+.btn__google {
     @extend %center;
-    border-radius: 7px;
+    mix-blend-mode: normal;
+    border: 2px solid #7165e3;
+}
+
+.btn__apple-white {
+    border-color: $main-white;
+}
+.btn__google-white {
+    border-color: $main-white;
 }

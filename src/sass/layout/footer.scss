@@ -14,10 +14,6 @@
     outline: 1px solid tomato;
 
     @include for-size(tablet-portrait-up) {
-        // display: flex;
-        // justify-content: space-between;
-        // align-items: flex-start;
-        // width: 686px;
     }
 
     @include for-size(desktop-up) {
@@ -25,7 +21,7 @@
         width: 966px;
     }
 }
-
+.footer__descr,
 .contacts__descr {
     @extend %reset;
 }
@@ -33,6 +29,7 @@
 .contacts__link {
 }
 
+.footer__descr,
 .contacts__descr,
 .contacts__link {
     font: {
@@ -40,7 +37,7 @@
         style: normal;
     }
 
-    @include font-source-sans(14px, $main-dark, 600, 19px, 0.04em);
+    @include font-source-sans(16px, $main-secondary-font, normal, 22px, 0.02em);
 }
 
 .footer__information {
