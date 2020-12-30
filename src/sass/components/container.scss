@@ -4,6 +4,10 @@
     @include padding(null 15px);
     outline: 1px solid tomato;
 
+    @media screen and (max-width: 375px) {
+        @include padding(null 5px);
+    }
+
     @include for-size(tablet-portrait-up) {
         width: $tab-wrapper;
     }
