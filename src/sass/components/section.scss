@@ -28,7 +28,6 @@
 .section__content {
     width: 288px;
     z-index: 3;
-    outline: 1px solid tomato;
 
     @include for-size(desktop-up) {
         width: 320px;
@@ -37,7 +36,6 @@
     &-small {
         width: 288px;
         z-index: 3;
-        outline: 1px solid tomato;
 
         @include for-size(desktop-up) {
             width: 262px;
@@ -94,7 +92,6 @@
 
     @include for-size(desktop-up) {
         margin-bottom: 35px;
-        line-height: 31px;
     }
 }
 
@@ -114,4 +111,14 @@
     @include for-size(desktop-up) {
         font-size: 16px;
     }
+}
+
+.section__text {
+    @extend %reset;
+    font: {
+        family: 'Open Sans';
+        style: normal;
+    }
+
+    @include font-source-sans(16px, $main-dark, normal, 24px, null);
 }

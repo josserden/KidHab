@@ -12,8 +12,6 @@
 }
 
 .footer__wrapper {
-    outline: 1px solid tomato;
-
     @include for-size(tablet-portrait-up) {
     }
 
@@ -115,7 +113,6 @@
 
 .footer__box {
     margin-top: 60px;
-    outline: 1px solid tomato;
 
     @include for-size(phone-only) {
         text-align: center;

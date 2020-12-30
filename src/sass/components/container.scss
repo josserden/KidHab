@@ -2,7 +2,6 @@
     width: 100%;
     @include margin(null auto);
     @include padding(null 15px);
-    outline: 1px solid tomato;
 
     @media screen and (max-width: 375px) {
         @include padding(null 5px);

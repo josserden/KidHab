@@ -1,0 +1,126 @@
+.section__team {
+    @include padding(35px null 30px null);
+
+    @include for-size(tablet-portrait-up) {
+        @include padding(35px null 90px null);
+    }
+
+    @include for-size(desktop-up) {
+        @include padding(35px null 25px null);
+    }
+}
+
+.section__team .section__title {
+    margin-bottom: 40px;
+}
+
+.team__content {
+    max-width: 750px;
+    text-align: left;
+
+    margin-bottom: 45px;
+
+    @include for-size(tablet-portrait-up) {
+        margin-bottom: 48px;
+    }
+
+    @include for-size(desktop-up) {
+        margin-bottom: 80px;
+    }
+}
+
+.team__list {
+    @include for-size(tablet-portrait-up) {
+        display: flex;
+        flex-wrap: wrap;
+
+        margin: -25px;
+    }
+
+    @include for-size(desktop-up) {
+        margin: -40px;
+    }
+}
+
+.team__item {
+    display: flex;
+
+    @include for-size(phone-only) {
+        justify-content: center;
+        min-width: 280px;
+        width: 100%;
+        @include margin(null auto);
+    }
+
+    @include for-size(tablet-portrait-up) {
+        flex-direction: column;
+        align-items: center;
+        width: calc((100% - 4 * 25px) / 2);
+
+        margin: 25px;
+    }
+
+    @include for-size(desktop-up) {
+        width: calc((100% - 6 * 40px) / 3);
+        margin: 40px;
+    }
+}
+
+.team__item + .team__item {
+    @include for-size(phone-only) {
+        margin-top: 20px;
+    }
+}
+
+.team__img {
+    @extend %center;
+    @include size(100px, 100px);
+    background-color: #c4c4c4;
+    border-radius: 50%;
+
+    @include for-size(phone-only) {
+        margin-right: 30px;
+    }
+
+    @include for-size(tablet-portrait-up) {
+        @include size(257px, 257px);
+        margin-bottom: 20px;
+    }
+}
+
+.team__img-intro {
+    @include size(100px, 100px);
+
+    @include for-size(tablet-portrait-up) {
+        @include size(257px, 257px);
+    }
+}
+
+.thumb {
+    @include for-size(phone-only) {
+        width: 135px;
+    }
+
+    @include for-size(tablet-portrait-up) {
+        text-align: center;
+    }
+}
+
+.team__title {
+    font: {
+        family: 'Raleway';
+        style: normal;
+    }
+    @extend %reset;
+    @include font-source-sans(17px, $main-accent, 600, 31px, 0.04em);
+}
+
+.team__descr {
+    @extend %reset;
+    font: {
+        family: 'Open Sans';
+        style: normal;
+    }
+
+    @include font-source-sans(14px, $main-dark, 400, 16px, null);
+}
