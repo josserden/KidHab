@@ -1,6 +1,12 @@
 <header class="header">
     <div class="container">
-        <a href="#" class="site__logo">KidHab</a>
+        <a href="#" class="site__logo"
+            ><img
+                class="site__logo-img"
+                src="./images/logo.svg"
+                alt="Лого"
+            />KidHab</a
+        >
         <nav class="site__nav">
             <ul class="nav__list">
                 <li class="nav__item">
@@ -10,11 +16,33 @@
                     <a class="nav__link" href="#">Команда</a>
                 </li>
             </ul>
-            <select class="form__select" aria-label="Default select example">
-                <option value="1"><a href="#">icon 1</a></option>
-                <option value="2"><a href="#">icon 2</a></option>
-                <option value="3"><a href="#">icon 3</a></option>
-            </select>
+            <div class="lang-switcher">
+                <button class="lang-switcher__btn">
+                    <svg class="lang-switcher__icon">
+                        <use href="./images/symbol-defs.svg#ua"></use>
+                    </svg>
+                    <svg class="icon-arrow" width="12" height="8">
+                        <use href="./images/symbol-defs.svg#icon-arrow"></use>
+                    </svg>
+                </button>
+
+                <ul class="lang-switcher__dropdown">
+                    <li class="lang-switcher__dropdown-item">
+                        <a href="" class="lang-switcher__dropdown-link">
+                            <svg class="lang-switcher__icon">
+                                <use href="./images/symbol-defs.svg#gb"></use>
+                            </svg>
+                        </a>
+                    </li>
+                    <li class="lang-switcher__dropdown-item">
+                        <a href="" class="lang-switcher__dropdown-link">
+                            <svg class="lang-switcher__icon">
+                                <use href="./images/symbol-defs.svg#ru"></use>
+                            </svg>
+                        </a>
+                    </li>
+                </ul>
+            </div>
         </nav>
     </div>
 </header>

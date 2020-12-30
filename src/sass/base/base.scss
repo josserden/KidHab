@@ -9,8 +9,11 @@ html {
     box-sizing: inherit;
 }
 
-// body {
-// }
+body {
+    font-size: 16px;
+    font-family: 'Raleway', sans-serif;
+    line-height: 1.5;
+}
 
 ul {
     padding: 0;
@@ -21,6 +24,7 @@ ul {
 a {
     display: block;
     text-decoration: none;
+    color: inherit;
 }
 
 img,

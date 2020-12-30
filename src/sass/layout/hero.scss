@@ -1,13 +1,140 @@
-.hero__content {
-    @include size(100px, auto);
-}
+.hero {
+    position: relative;
+    height: 100vh;
+    background-image: url(../images/hero/bg-mobile.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    overflow: hidden;
 
-.hero__title {
     @include for-size(tablet-portrait-up) {
-        width: $tab-wrapper;
+        background-image: url(../images/hero/bg-tablet.jpg);
     }
 
     @include for-size(desktop-up) {
-        width: $pc-wrapper;
+        min-height: 700px;
+        background-image: url(../images/hero/bg-desktop.jpg);
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        display: block;
+        width: 100%;
+        height: 100%;
+        background-image: $gradient;
+        z-index: 3;
+    }
+
+    .header {
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        z-index: 55;
+    }
+
+    & > .container {
+        position: absolute;
+        left: 50%;
+        bottom: 52px;
+        transform: translateX(-50%);
+        z-index: 5;
+
+        @include for-size(desktop-up) {
+            bottom: 150px;
+        }
+    }
+}
+
+.hero__video {
+    display: none;
+    min-width: 100%;
+    min-height: 100%;
+    height: 100vh;
+
+    @include for-size(tablet-portrait-up) {
+        display: block;
+        position: absolute;
+        top: 0;
+        right: -40%;
+        z-index: 1;
+    }
+
+    @include for-size(tablet-landscape-up) {
+        right: -15%;
+    }
+
+    @include for-size(desktop-up) {
+        right: 0;
+    }
+}
+
+.hero__content {
+    @include for-size(tablet-portrait-up) {
+        width: 50%;
+    }
+}
+
+.hero__title {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 1.4;
+    letter-spacing: 0.04em;
+    color: $main-white;
+    max-width: 300px;
+
+    @include for-size(tablet-portrait-up) {
+        max-width: 100%;
+        font-size: 21px;
+        line-height: 1.48;
+    }
+}
+
+.upload {
+    margin-top: 52px;
+
+    @include for-size(tablet-portrait-up) {
+        margin-top: 63px;
+    }
+
+    @include for-size(desktop-up) {
+        display: flex;
+        margin-top: 76px;
+    }
+}
+
+.upload__item {
+    &:not(:last-child) {
+        margin-bottom: 12px;
+
+        @include for-size(tablet-portrait-up) {
+            margin-bottom: 15px;
+        }
+
+        @include for-size(desktop-up) {
+            margin-right: 20px;
+            margin-bottom: 0;
+        }
+    }
+
+    .button {
+        width: 136px;
+        height: 41px;
+        border-color: $main-white;
+
+        @include for-size(tablet-portrait-up) {
+            width: 160px;
+            height: 48px;
+        }
+
+        @include for-size(desktop-up) {
+            width: 235px;
+            height: 70px;
+        }
+    }
+
+    svg {
+        --color1: #fff;
     }
 }
