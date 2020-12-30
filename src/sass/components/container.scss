@@ -3,9 +3,9 @@
     @include margin(null auto);
     @include padding(null 15px);
 
-    @media screen and (max-width: 375px) {
-        @include padding(null 5px);
-    }
+    // @media screen and (max-width: 375px) {
+    //     @include padding(null 5px);
+    // }
 
     @include for-size(tablet-portrait-up) {
         width: $tab-wrapper;
