@@ -1,0 +1,36 @@
+.emotions {
+    @media screen and (max-width: 767px) {
+        padding-bottom: 160px;
+    }
+}
+
+.emotion__img {
+    @include size(240px, 566px);
+
+    @include for-size(desktop-up) {
+        @include size(320px, 756px);
+    }
+}
+
+.emotion__img-intro {
+    @include size(240px, 566px);
+
+    @include for-size(desktop-up) {
+        @include size(320px, 756px);
+    }
+}
+
+.emotion__icon {
+    @include position(absolute, null null -140px 0);
+    @include size(288px, 255px);
+
+    @include for-size(tablet-portrait-up) {
+        @include position(null, null null 35px 55px);
+        @include size(605px, 481px);
+    }
+
+    @include for-size(desktop-up) {
+        @include position(null, 0 null -75px null);
+        @include size(693px, 573px);
+    }
+}

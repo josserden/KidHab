@@ -1,0 +1,105 @@
+.button {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    background-color: transparent;
+    border: none;
+    font-family: inherit;
+
+    cursor: pointer;
+}
+
+.form__btn {
+    display: inline-block;
+    @include font-source-sans(14px, $main-dark, 600, 19px, 0.04em);
+    @include padding(15px 30px);
+    margin-top: 30px;
+    font: {
+        family: 'Open Sans';
+        style: normal;
+    }
+    text-transform: capitalize;
+    box-shadow: 0px 2px 4px rgba(255, 211, 36, 0.12),
+        0px 3px 4px rgba(255, 211, 36, 0.2),
+        0px 10px 32px rgba(255, 211, 36, 0.24);
+    border-radius: 8px;
+    background-color: $main-accent-yellow;
+    transition: box-shadow $animation, letter-spacing $animation;
+
+    &:hover,
+    &:focus {
+        box-shadow: none;
+        letter-spacing: 0.05em;
+    }
+}
+
+.btn__apple {
+    @include size(209px, 70px);
+    border-radius: 7px;
+    margin-bottom: 19px;
+
+    @include for-size(desktop-up) {
+        margin-bottom: 16px;
+    }
+}
+
+.btn__google {
+    @include size(235px, 70px);
+    border-radius: 5px;
+}
+
+.btn__apple,
+.btn__google {
+    @extend %center;
+    mix-blend-mode: normal;
+    border: 2px solid #7165e3;
+}
+
+.btn__apple-white,
+.btn__google-white {
+    border: 2px solid $main-white;
+    @include size(120px, 40px);
+
+    @include for-size(tablet-portrait-up) {
+        @include size(142px, 50px);
+    }
+
+    @include for-size(desktop-up) {
+        @include size(210px, 70px);
+    }
+}
+
+.btn__google-white {
+    @include size(136px, 40px);
+
+    @include for-size(tablet-portrait-up) {
+        @include size(160px, 48px);
+    }
+
+    @include for-size(desktop-up) {
+        @include size(235px, 70px);
+    }
+}
+
+.btn-to-top {
+    @include size(59px, 57px);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+
+    font: {
+        family: 'Raleway';
+        style: normal;
+    }
+
+    @include font-source-sans(17px, $main-accent-font, 600, 31px, 0.04em);
+
+    @include for-size(phone-only) {
+        @include margin(null auto 40px auto);
+    }
+
+    @include for-size(tablet-portrait-up) {
+        // margin-right: 180px;
+    }
+}

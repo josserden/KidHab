@@ -1,0 +1,37 @@
+// Main font
+$main-font: 'Open Sans', sans-serif;
+
+// Color
+$main-dark: #2e3539;
+$main-white: #ffffff;
+$main-accent: #7165e3;
+$main-accent-yellow: #ffd324;
+$main-secondary: #818c9b;
+$accent-bgc: #f7f8fc;
+$gradient: linear-gradient(
+    78.6deg,
+    rgba(113, 101, 227, 0.9) 14.74%,
+    rgba(255, 211, 36, 0.2) 101.59%
+);
+$drop-shadow: 0px 15px 20px rgba(113, 101, 227, 0.2);
+$form-border: rgba(129, 140, 155, 0.4);
+$form-border-focus: rgba(129, 140, 155, 0.9);
+
+// Colors Fonts
+$main-dark-font: $main-dark;
+$main-white-font: $main-white;
+$main-accent-font: $main-accent;
+$main-secondary-font: $main-secondary;
+
+// Breakpoints
+$mobile: 320px;
+$tablet: 768px;
+$pc: 1200px;
+
+// Container
+$mob-wrapper: $mobile;
+$tab-wrapper: $tablet;
+$pc-wrapper: $pc;
+
+// Animation
+$animation: 250ms linear;

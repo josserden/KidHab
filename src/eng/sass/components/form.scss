@@ -1,0 +1,77 @@
+.form {
+    width: 100%;
+}
+
+.form__wrapper {
+    width: 100%;
+
+    @media screen and (max-width: 767px) {
+        margin-bottom: 49px;
+    }
+
+    @media screen and (max-width: 1199px) {
+        margin-bottom: 49px;
+    }
+
+    @include for-size(desktop-up) {
+        width: 361px;
+        margin-right: 30px;
+    }
+}
+
+.form__title {
+    margin-bottom: 5px;
+}
+
+.form__field {
+    position: relative;
+    display: block;
+}
+
+.form__field + .form__field {
+    margin-top: 15px;
+}
+
+.form__label {
+    @include position(absolute, 50% null null 20px);
+    transform: translateY(-50%);
+    transition: opacity $animation;
+    @include font-source-sans(14px, $main-secondary, normal, 19px, 0.02em);
+
+    font: {
+        family: 'Open Sans';
+        style: normal;
+    }
+
+    text-transform: capitalize;
+}
+
+.form__label-text {
+    @include position(null, 20px null null null);
+}
+
+.form__input,
+.textarea {
+    width: 100%;
+    margin: 0;
+    padding: 16px;
+    font: inherit;
+    border-radius: 8px;
+    border: 1px solid $form-border;
+    outline: none;
+}
+
+.form__input:focus,
+.textarea:focus {
+    box-shadow: 0px 0px 3px 1px #818c9b;
+}
+
+.textarea {
+    @include size(100%, 160px);
+    resize: none;
+}
+
+.form__field:focus-within > .form__label,
+.form__input:not(:placeholder-shown) + .form__label {
+    opacity: 0;
+}

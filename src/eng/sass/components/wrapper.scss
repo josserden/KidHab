@@ -1,0 +1,42 @@
+.wrapper {
+    @media screen and (max-width: 767px) {
+        @include size(205px, auto);
+    }
+    @include margin(null auto);
+    text-align: center;
+}
+
+.wrapper__left,
+.wrapper__right {
+    position: relative;
+    width: 290px;
+    @include margin(null auto);
+
+    @include for-size(tablet-portrait-up) {
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        width: 686px;
+    }
+
+    @include for-size(desktop-up) {
+        width: 944px;
+    }
+}
+
+.wrapper__left {
+    @include for-size(desktop-up) {
+        margin-right: auto;
+        margin-left: 0;
+    }
+}
+
+.wrapper__right {
+    @include for-size(tablet-portrait-up) {
+        flex-direction: row-reverse;
+    }
+    @include for-size(desktop-up) {
+        margin-left: auto;
+        margin-right: 0;
+    }
+}

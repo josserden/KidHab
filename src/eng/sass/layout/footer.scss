@@ -1,0 +1,135 @@
+.footer {
+    position: relative;
+    @include padding(40px null 15px null);
+
+    @include for-size(tablet-portrait-up) {
+        @include padding(50px null 18px null);
+    }
+
+    @include for-size(desktop-up) {
+        @include padding(38px null 21px null);
+    }
+}
+
+.footer__wrapper {
+    @include for-size(tablet-portrait-up) {
+    }
+
+    @include for-size(desktop-up) {
+        display: flex;
+        width: 966px;
+    }
+}
+
+.footer__title {
+    @extend %reset;
+    font: {
+        family: 'Raleway';
+        style: normal;
+    }
+
+    @include font-source-sans(17px, $main-accent-font, 600, 31px, 0.04em);
+
+    margin-top: 25px;
+    margin-bottom: 14px;
+
+    @include for-size(desktop-up) {
+        margin-bottom: 17px;
+    }
+}
+
+.footer__descr,
+.contacts__descr {
+    @extend %reset;
+}
+
+.contacts__link {
+    transition: color $animation;
+
+    &:hover,
+    &:focus {
+        color: $main-accent;
+    }
+}
+
+.footer__descr,
+.contacts__descr,
+.contacts__link {
+    font: {
+        family: 'Open Sans';
+        style: normal;
+    }
+
+    @include font-source-sans(16px, $main-secondary-font, normal, 22px, 0.02em);
+}
+
+.contacts__descr + .contacts__descr,
+.contacts__tel + .contacts__tel {
+    margin-top: 3px;
+}
+
+.contacts__mail {
+    margin-top: 25px;
+    margin-bottom: 25px;
+}
+
+.footer__information {
+    @include for-size(tablet-portrait-up) {
+        display: flex;
+    }
+
+    @include for-size(desktop-up) {
+    }
+}
+
+.links__wrapper {
+    @include for-size(tablet-portrait-up) {
+        margin-right: 113px;
+    }
+
+    @include for-size(desktop-up) {
+        margin-right: 154px;
+    }
+}
+
+.social {
+    display: flex;
+    align-items: center;
+
+    margin-top: 52px;
+
+    @include for-size(phone-only) {
+        justify-content: center;
+    }
+
+    .social__links {
+        @include size(35px, 35px);
+    }
+
+    .social__links + .social__links {
+        margin-left: 35px;
+    }
+}
+
+.footer__box {
+    margin-top: 60px;
+
+    @include for-size(phone-only) {
+        text-align: center;
+    }
+
+    @include for-size(tablet-portrait-up) {
+        width: 384px;
+        margin-left: auto;
+        display: flex;
+        align-items: flex-end;
+        justify-content: space-between;
+    }
+
+    @include for-size(desktop-up) {
+        margin-top: 0;
+        width: 355px;
+        @include position(absolute, null null 16px 60%);
+        transform: translateX(-50%);
+    }
+}
